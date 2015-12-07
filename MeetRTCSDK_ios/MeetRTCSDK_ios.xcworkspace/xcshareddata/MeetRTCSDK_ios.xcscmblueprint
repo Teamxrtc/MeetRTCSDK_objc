@@ -1,0 +1,36 @@
+{
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "B775552D1BBEEADC6A0BBB2FD048B6AA26CB309D" : 0,
+    "819FBC24687EB375672653D3764D5EFEACA24378" : 0,
+    "0006B0BA52D28323DD10C6B60DD1156F63DEFDA2" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "6D09B6D6-0B7D-48F2-8156-6D5E1F2E3DF7",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "B775552D1BBEEADC6A0BBB2FD048B6AA26CB309D" : "XMPPFramework\/",
+    "819FBC24687EB375672653D3764D5EFEACA24378" : "XEP-0166\/",
+    "0006B0BA52D28323DD10C6B60DD1156F63DEFDA2" : "XEP-0327\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "MeetRTCSDK_ios",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "MeetRTCSDK_ios\/MeetRTCSDK_ios.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Teamxrtc\/XEP-0327.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "0006B0BA52D28323DD10C6B60DD1156F63DEFDA2"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Teamxrtc\/XEP-0166.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "819FBC24687EB375672653D3764D5EFEACA24378"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Teamxrtc\/XMPPFramework.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "B775552D1BBEEADC6A0BBB2FD048B6AA26CB309D"
+    }
+  ]
+}

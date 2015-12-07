@@ -1,0 +1,6 @@
+platform :ios, '8.0'
+
+pod 'libjingle_peerconnection', '~> 10842.2'
+pod 'XMPPFramework', :path => '../../XMPPFramework'
+pod 'XEP-0166', :path => '../../XEP-0166'
+pod 'XEP-0327', :path => '../../XEP-0327'
