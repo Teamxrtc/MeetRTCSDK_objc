@@ -116,8 +116,10 @@ NSString* const TAG4 = @"WebRTCSession";
     dtlsFlagValue = @"false";
     allcandidates = [[NSMutableArray alloc]init];
     updatedIceServers =[[NSMutableArray alloc]init];
+  
+    NSURL *url = [NSURL URLWithString:@"stun:stun.l.google.com:19302"];
     
-    [updatedIceServers addObject:[[RTCICEServer alloc] initWithURI:@"stun:stun.l.google.com:19302"
+    [updatedIceServers addObject:[[RTCICEServer alloc] initWithURI:url
                                                  username:@""
                                                  password:@""]];
     isCandidateSent = false;
@@ -190,8 +192,10 @@ NSString* const TAG4 = @"WebRTCSession";
     dtlsFlagValue = @"false";
     allcandidates = [[NSMutableArray alloc]init];
     updatedIceServers =[[NSMutableArray alloc]init];
-    
-    [updatedIceServers addObject:[[RTCICEServer alloc] initWithURI:@"stun:stun.l.google.com:19302"
+  
+    NSURL *url = [NSURL URLWithString:@"stun:stun.l.google.com:19302"];
+
+    [updatedIceServers addObject:[[RTCICEServer alloc] initWithURI:url
                                                           username:@""
                                                           password:@""]];
     isCandidateSent = false;
@@ -263,8 +267,10 @@ NSString* const TAG4 = @"WebRTCSession";
     dtlsFlagValue = @"true";
     allcandidates = [[NSMutableArray alloc]init];
     updatedIceServers =[[NSMutableArray alloc]init];
-    
-    [updatedIceServers addObject:[[RTCICEServer alloc] initWithURI:@"stun:stun.l.google.com:19302"
+  
+    NSURL *url = [NSURL URLWithString:@"stun:stun.l.google.com:19302"];
+
+    [updatedIceServers addObject:[[RTCICEServer alloc] initWithURI:url
                                                           username:@""
                                                           password:@""]];
     isCandidateSent = false;
@@ -316,7 +322,10 @@ NSString* const TAG4 = @"WebRTCSession";
     _offsetTotalPacket = 0;
     lastSr = nil;
     updatedIceServers =[[NSMutableArray alloc]init];
-    [updatedIceServers addObject:[[RTCICEServer alloc] initWithURI:@"stun:stun.l.google.com:19302"
+  
+    NSURL *url = [NSURL URLWithString:@"stun:stun.l.google.com:19302"];
+
+    [updatedIceServers addObject:[[RTCICEServer alloc] initWithURI:url
                                                           username:@""
                                                           password:@""]];
     isVideoSuspended = false ;
@@ -1164,7 +1173,8 @@ NSString* const TAG4 = @"WebRTCSession";
         
         for (int i=0; i < [uris count]; i++)
         {
-            NSString * urlString = [uris objectAtIndex:i];
+            NSURL * urlString = [NSURL URLWithString:[uris objectAtIndex:i]];
+
             [updatedIceServers addObject:[[RTCICEServer alloc] initWithURI:urlString
                                                               username:username
                                                               password:credential]];

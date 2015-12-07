@@ -113,7 +113,7 @@ NSString* const TAG5 = @"WebRTCStack";
 
     return self;
 }
-
+#if 0
 - (void) startSignalingServer:(NSDictionary*) websocketdata iceserverdata:(NSDictionary*)iceserverdata;
 {
     LogDebug(@"Inside startSignalingServer ");
@@ -232,6 +232,7 @@ NSString* const TAG5 = @"WebRTCStack";
         
         return addresses;
 }
+#endif
 
 - (id)initWithDefaultValue:(WebRTCStackConfig*)_stackConfig _appdelegate:(id<WebRTCStackDelegate>)_appdelegate
 {
@@ -459,7 +460,6 @@ NSString* const TAG5 = @"WebRTCStack";
     _stream = [[WebRTCStream alloc]init];
 
     _stream.delegate = self;
-    _stream.recordingDelegate = (id<WebRTCAVRecordingDelegate>)appDelegate;
     [_stream start];
     return _stream;
 }
@@ -1136,6 +1136,7 @@ NSString* const TAG5 = @"WebRTCStack";
     [self _reconnectCallback];
 }
 
+#ifdef H264_SUPPORT
 -(void)sendpreferredH264:(BOOL)preferH264{
 #ifdef __IPHONE_8_0
     [RTCPeerConnectionFactory OnSetH264:preferH264];
@@ -1143,6 +1144,7 @@ NSString* const TAG5 = @"WebRTCStack";
     NSLog(@"Call on iOS version less than iOS 8 will run on VP8 only !!!");
 #endif
 }
+#endif
 
 -(void) dial:(NSString*)toPhone from:(NSString*)fromPhone
 {

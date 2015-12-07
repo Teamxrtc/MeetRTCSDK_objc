@@ -4,7 +4,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "SocketIO.h"
+//#import "SocketIO.h"
 #import "WebRTCStatsCollector.h"
 
 @class WebRTCStack,WebRTCStatsCollector;
@@ -17,9 +17,10 @@
 - (void)onSignalHandlerError:(NSString*) error Errorcode:(NSInteger)code;
 @end
 
-@interface SignalHandler : NSObject <SocketIODelegate>
+@interface SignalHandler : NSObject
+//<SocketIODelegate>
 {
-    SocketIO *socket;
+//    SocketIO *socket;
     BOOL      secureEnabled;
     WebRTCStatsCollector* statscollector;
 }

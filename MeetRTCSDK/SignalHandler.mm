@@ -4,7 +4,7 @@
 
 
 #import "SignalHandler.h"
-#import "SocketIOPacket.h"
+//#import "SocketIOPacket.h"
 #import "WebRTCError.h"
 #import "WebRTCLogHandler.h"
 #import "WebRTCLogging.h"
@@ -48,6 +48,7 @@ NSString* const TAG3 = @"SignalHandler";
     return self;
 }
 
+#if 0
 // Connect to the signalling gateway using socket io
 - (void)connectToSignallingServer
 {
@@ -268,5 +269,6 @@ NSString* const TAG3 = @"SignalHandler";
         LogDebug(@"Webrtc:SignalHandler:: No delegate exists to post the message");
     }
 }
+#endif //socket.io
 
 @end

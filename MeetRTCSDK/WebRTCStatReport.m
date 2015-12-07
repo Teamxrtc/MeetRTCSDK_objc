@@ -817,7 +817,7 @@ static BOOL isTurnIPAvailable;
     NSString * serverIP = @"";
     BOOL isActive = false;
     BOOL isRelay = false;        
-    NSString* remoteCandidateType = @"relay";
+//    NSString* remoteCandidateType = @"relay";
     
     for(RTCPair* pair in pairs)
     {

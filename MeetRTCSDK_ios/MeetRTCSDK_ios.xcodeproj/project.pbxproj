@@ -7,8 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		405C44B91C13DC3C001B9A2A /* MeetRTCSDK_ios.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 405C44B81C13DC3C001B9A2A /* MeetRTCSDK_ios.h */; };
-		405C44BB1C13DC3C001B9A2A /* MeetRTCSDK_ios.m in Sources */ = {isa = PBXBuildFile; fileRef = 405C44BA1C13DC3C001B9A2A /* MeetRTCSDK_ios.m */; };
+		40AEB9141C14E0FE004BF295 /* XMPPMessage+Signaling.m in Sources */ = {isa = PBXBuildFile; fileRef = 40AEB9111C14E0FE004BF295 /* XMPPMessage+Signaling.m */; };
+		40AEB9151C14E0FE004BF295 /* XMPPWorker.m in Sources */ = {isa = PBXBuildFile; fileRef = 40AEB9131C14E0FE004BF295 /* XMPPWorker.m */; };
+		40AEB9401C14E161004BF295 /* MeetRTCSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = 40AEB9181C14E161004BF295 /* MeetRTCSDK.m */; };
+		40AEB9411C14E161004BF295 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 40AEB91A1C14E161004BF295 /* Reachability.m */; };
+		40AEB9441C14E161004BF295 /* WebRTCConsoleLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 40AEB9211C14E161004BF295 /* WebRTCConsoleLogger.m */; };
+		40AEB9451C14E161004BF295 /* WebRTCFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 40AEB9241C14E161004BF295 /* WebRTCFactory.m */; };
+		40AEB9471C14E161004BF295 /* WebRTCJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 40AEB9281C14E161004BF295 /* WebRTCJson.m */; };
+		40AEB9481C14E161004BF295 /* WebRTCLogging.m in Sources */ = {isa = PBXBuildFile; fileRef = 40AEB92A1C14E161004BF295 /* WebRTCLogging.m */; };
+		40AEB9491C14E161004BF295 /* WebRTCLogHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 40AEB92C1C14E161004BF295 /* WebRTCLogHandler.m */; };
+		40AEB94A1C14E161004BF295 /* WebRTCSession.mm in Sources */ = {isa = PBXBuildFile; fileRef = 40AEB92E1C14E161004BF295 /* WebRTCSession.mm */; };
+		40AEB94B1C14E161004BF295 /* WebRTCSessionConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 40AEB9301C14E161004BF295 /* WebRTCSessionConfig.m */; };
+		40AEB94C1C14E161004BF295 /* WebRTCStack.mm in Sources */ = {isa = PBXBuildFile; fileRef = 40AEB9321C14E161004BF295 /* WebRTCStack.mm */; };
+		40AEB94D1C14E161004BF295 /* WebRTCStackConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 40AEB9341C14E161004BF295 /* WebRTCStackConfig.m */; };
+		40AEB94E1C14E161004BF295 /* WebRTCStatGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 40AEB9361C14E161004BF295 /* WebRTCStatGroup.m */; };
+		40AEB94F1C14E161004BF295 /* WebRTCStatReport.m in Sources */ = {isa = PBXBuildFile; fileRef = 40AEB9381C14E161004BF295 /* WebRTCStatReport.m */; };
+		40AEB9501C14E161004BF295 /* WebRTCStatsCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 40AEB93A1C14E161004BF295 /* WebRTCStatsCollector.m */; };
+		40AEB9511C14E161004BF295 /* WebRTCStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 40AEB93C1C14E161004BF295 /* WebRTCStream.m */; };
+		40AEB9521C14E161004BF295 /* WebRTCStreamConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 40AEB93E1C14E161004BF295 /* WebRTCStreamConfig.m */; };
+		F6DA77828F30BDD74C356DD1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FF877F914E84921DC6B51C8 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -18,16 +35,55 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				405C44B91C13DC3C001B9A2A /* MeetRTCSDK_ios.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2FF877F914E84921DC6B51C8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		405C44B51C13DC3C001B9A2A /* libMeetRTCSDK_ios.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMeetRTCSDK_ios.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		405C44B81C13DC3C001B9A2A /* MeetRTCSDK_ios.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeetRTCSDK_ios.h; sourceTree = "<group>"; };
-		405C44BA1C13DC3C001B9A2A /* MeetRTCSDK_ios.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeetRTCSDK_ios.m; sourceTree = "<group>"; };
+		40AEB9101C14E0FE004BF295 /* XMPPMessage+Signaling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "XMPPMessage+Signaling.h"; path = "../XMPP/XMPPMessage+Signaling.h"; sourceTree = SOURCE_ROOT; };
+		40AEB9111C14E0FE004BF295 /* XMPPMessage+Signaling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "XMPPMessage+Signaling.m"; path = "../XMPP/XMPPMessage+Signaling.m"; sourceTree = SOURCE_ROOT; };
+		40AEB9121C14E0FE004BF295 /* XMPPWorker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XMPPWorker.h; path = ../XMPP/XMPPWorker.h; sourceTree = SOURCE_ROOT; };
+		40AEB9131C14E0FE004BF295 /* XMPPWorker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XMPPWorker.m; path = ../XMPP/XMPPWorker.m; sourceTree = SOURCE_ROOT; };
+		40AEB9161C14E161004BF295 /* DTMF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTMF.h; path = ../MeetRTCSDK/DTMF.h; sourceTree = SOURCE_ROOT; };
+		40AEB9171C14E161004BF295 /* MeetRTCSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MeetRTCSDK.h; path = ../MeetRTCSDK/MeetRTCSDK.h; sourceTree = SOURCE_ROOT; };
+		40AEB9181C14E161004BF295 /* MeetRTCSDK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MeetRTCSDK.m; path = ../MeetRTCSDK/MeetRTCSDK.m; sourceTree = SOURCE_ROOT; };
+		40AEB9191C14E161004BF295 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reachability.h; path = ../MeetRTCSDK/Reachability.h; sourceTree = SOURCE_ROOT; };
+		40AEB91A1C14E161004BF295 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = ../MeetRTCSDK/Reachability.m; sourceTree = SOURCE_ROOT; };
+		40AEB9201C14E161004BF295 /* WebRTCConsoleLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebRTCConsoleLogger.h; path = ../MeetRTCSDK/WebRTCConsoleLogger.h; sourceTree = SOURCE_ROOT; };
+		40AEB9211C14E161004BF295 /* WebRTCConsoleLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebRTCConsoleLogger.m; path = ../MeetRTCSDK/WebRTCConsoleLogger.m; sourceTree = SOURCE_ROOT; };
+		40AEB9221C14E161004BF295 /* WebRTCError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebRTCError.h; path = ../MeetRTCSDK/WebRTCError.h; sourceTree = SOURCE_ROOT; };
+		40AEB9231C14E161004BF295 /* WebRTCFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebRTCFactory.h; path = ../MeetRTCSDK/WebRTCFactory.h; sourceTree = SOURCE_ROOT; };
+		40AEB9241C14E161004BF295 /* WebRTCFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebRTCFactory.m; path = ../MeetRTCSDK/WebRTCFactory.m; sourceTree = SOURCE_ROOT; };
+		40AEB9271C14E161004BF295 /* WebRTCJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebRTCJSON.h; path = ../MeetRTCSDK/WebRTCJSON.h; sourceTree = SOURCE_ROOT; };
+		40AEB9281C14E161004BF295 /* WebRTCJson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebRTCJson.m; path = ../MeetRTCSDK/WebRTCJson.m; sourceTree = SOURCE_ROOT; };
+		40AEB9291C14E161004BF295 /* WebRTCLogging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebRTCLogging.h; path = ../MeetRTCSDK/WebRTCLogging.h; sourceTree = SOURCE_ROOT; };
+		40AEB92A1C14E161004BF295 /* WebRTCLogging.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebRTCLogging.m; path = ../MeetRTCSDK/WebRTCLogging.m; sourceTree = SOURCE_ROOT; };
+		40AEB92B1C14E161004BF295 /* WebRTCLogHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebRTCLogHandler.h; path = ../MeetRTCSDK/WebRTCLogHandler.h; sourceTree = SOURCE_ROOT; };
+		40AEB92C1C14E161004BF295 /* WebRTCLogHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebRTCLogHandler.m; path = ../MeetRTCSDK/WebRTCLogHandler.m; sourceTree = SOURCE_ROOT; };
+		40AEB92D1C14E161004BF295 /* WebRTCSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebRTCSession.h; path = ../MeetRTCSDK/WebRTCSession.h; sourceTree = SOURCE_ROOT; };
+		40AEB92E1C14E161004BF295 /* WebRTCSession.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = WebRTCSession.mm; path = ../MeetRTCSDK/WebRTCSession.mm; sourceTree = SOURCE_ROOT; };
+		40AEB92F1C14E161004BF295 /* WebRTCSessionConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebRTCSessionConfig.h; path = ../MeetRTCSDK/WebRTCSessionConfig.h; sourceTree = SOURCE_ROOT; };
+		40AEB9301C14E161004BF295 /* WebRTCSessionConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebRTCSessionConfig.m; path = ../MeetRTCSDK/WebRTCSessionConfig.m; sourceTree = SOURCE_ROOT; };
+		40AEB9311C14E161004BF295 /* WebRTCStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebRTCStack.h; path = ../MeetRTCSDK/WebRTCStack.h; sourceTree = SOURCE_ROOT; };
+		40AEB9321C14E161004BF295 /* WebRTCStack.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = WebRTCStack.mm; path = ../MeetRTCSDK/WebRTCStack.mm; sourceTree = SOURCE_ROOT; };
+		40AEB9331C14E161004BF295 /* WebRTCStackConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebRTCStackConfig.h; path = ../MeetRTCSDK/WebRTCStackConfig.h; sourceTree = SOURCE_ROOT; };
+		40AEB9341C14E161004BF295 /* WebRTCStackConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebRTCStackConfig.m; path = ../MeetRTCSDK/WebRTCStackConfig.m; sourceTree = SOURCE_ROOT; };
+		40AEB9351C14E161004BF295 /* WebRTCStatGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebRTCStatGroup.h; path = ../MeetRTCSDK/WebRTCStatGroup.h; sourceTree = SOURCE_ROOT; };
+		40AEB9361C14E161004BF295 /* WebRTCStatGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebRTCStatGroup.m; path = ../MeetRTCSDK/WebRTCStatGroup.m; sourceTree = SOURCE_ROOT; };
+		40AEB9371C14E161004BF295 /* WebRTCStatReport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebRTCStatReport.h; path = ../MeetRTCSDK/WebRTCStatReport.h; sourceTree = SOURCE_ROOT; };
+		40AEB9381C14E161004BF295 /* WebRTCStatReport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebRTCStatReport.m; path = ../MeetRTCSDK/WebRTCStatReport.m; sourceTree = SOURCE_ROOT; };
+		40AEB9391C14E161004BF295 /* WebRTCStatsCollector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebRTCStatsCollector.h; path = ../MeetRTCSDK/WebRTCStatsCollector.h; sourceTree = SOURCE_ROOT; };
+		40AEB93A1C14E161004BF295 /* WebRTCStatsCollector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebRTCStatsCollector.m; path = ../MeetRTCSDK/WebRTCStatsCollector.m; sourceTree = SOURCE_ROOT; };
+		40AEB93B1C14E161004BF295 /* WebRTCStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebRTCStream.h; path = ../MeetRTCSDK/WebRTCStream.h; sourceTree = SOURCE_ROOT; };
+		40AEB93C1C14E161004BF295 /* WebRTCStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebRTCStream.m; path = ../MeetRTCSDK/WebRTCStream.m; sourceTree = SOURCE_ROOT; };
+		40AEB93D1C14E161004BF295 /* WebRTCStreamConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebRTCStreamConfig.h; path = ../MeetRTCSDK/WebRTCStreamConfig.h; sourceTree = SOURCE_ROOT; };
+		40AEB93E1C14E161004BF295 /* WebRTCStreamConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebRTCStreamConfig.m; path = ../MeetRTCSDK/WebRTCStreamConfig.m; sourceTree = SOURCE_ROOT; };
+		40AEB93F1C14E161004BF295 /* WebRTCUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebRTCUtil.h; path = ../MeetRTCSDK/WebRTCUtil.h; sourceTree = SOURCE_ROOT; };
+		F6DB2EFFC3CF84E55E3DBB0C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		FFCEDB1F172E85F58FED2A50 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +91,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6DA77828F30BDD74C356DD1 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3782DB120B999808AB864BC1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2FF877F914E84921DC6B51C8 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		405C44AC1C13DC3C001B9A2A = {
 			isa = PBXGroup;
 			children = (
 				405C44B71C13DC3C001B9A2A /* MeetRTCSDK_ios */,
 				405C44B61C13DC3C001B9A2A /* Products */,
+				78058B523D5C6762130B22B4 /* Pods */,
+				3782DB120B999808AB864BC1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,10 +127,72 @@
 		405C44B71C13DC3C001B9A2A /* MeetRTCSDK_ios */ = {
 			isa = PBXGroup;
 			children = (
-				405C44B81C13DC3C001B9A2A /* MeetRTCSDK_ios.h */,
-				405C44BA1C13DC3C001B9A2A /* MeetRTCSDK_ios.m */,
+				405C44C11C13DCAE001B9A2A /* MeetRTC */,
+				405C44C21C13DCC2001B9A2A /* XMPP */,
 			);
 			path = MeetRTCSDK_ios;
+			sourceTree = "<group>";
+		};
+		405C44C11C13DCAE001B9A2A /* MeetRTC */ = {
+			isa = PBXGroup;
+			children = (
+				40AEB9161C14E161004BF295 /* DTMF.h */,
+				40AEB9171C14E161004BF295 /* MeetRTCSDK.h */,
+				40AEB9181C14E161004BF295 /* MeetRTCSDK.m */,
+				40AEB9191C14E161004BF295 /* Reachability.h */,
+				40AEB91A1C14E161004BF295 /* Reachability.m */,
+				40AEB9201C14E161004BF295 /* WebRTCConsoleLogger.h */,
+				40AEB9211C14E161004BF295 /* WebRTCConsoleLogger.m */,
+				40AEB9221C14E161004BF295 /* WebRTCError.h */,
+				40AEB9231C14E161004BF295 /* WebRTCFactory.h */,
+				40AEB9241C14E161004BF295 /* WebRTCFactory.m */,
+				40AEB9271C14E161004BF295 /* WebRTCJSON.h */,
+				40AEB9281C14E161004BF295 /* WebRTCJson.m */,
+				40AEB9291C14E161004BF295 /* WebRTCLogging.h */,
+				40AEB92A1C14E161004BF295 /* WebRTCLogging.m */,
+				40AEB92B1C14E161004BF295 /* WebRTCLogHandler.h */,
+				40AEB92C1C14E161004BF295 /* WebRTCLogHandler.m */,
+				40AEB92D1C14E161004BF295 /* WebRTCSession.h */,
+				40AEB92E1C14E161004BF295 /* WebRTCSession.mm */,
+				40AEB92F1C14E161004BF295 /* WebRTCSessionConfig.h */,
+				40AEB9301C14E161004BF295 /* WebRTCSessionConfig.m */,
+				40AEB9311C14E161004BF295 /* WebRTCStack.h */,
+				40AEB9321C14E161004BF295 /* WebRTCStack.mm */,
+				40AEB9331C14E161004BF295 /* WebRTCStackConfig.h */,
+				40AEB9341C14E161004BF295 /* WebRTCStackConfig.m */,
+				40AEB9351C14E161004BF295 /* WebRTCStatGroup.h */,
+				40AEB9361C14E161004BF295 /* WebRTCStatGroup.m */,
+				40AEB9371C14E161004BF295 /* WebRTCStatReport.h */,
+				40AEB9381C14E161004BF295 /* WebRTCStatReport.m */,
+				40AEB9391C14E161004BF295 /* WebRTCStatsCollector.h */,
+				40AEB93A1C14E161004BF295 /* WebRTCStatsCollector.m */,
+				40AEB93B1C14E161004BF295 /* WebRTCStream.h */,
+				40AEB93C1C14E161004BF295 /* WebRTCStream.m */,
+				40AEB93D1C14E161004BF295 /* WebRTCStreamConfig.h */,
+				40AEB93E1C14E161004BF295 /* WebRTCStreamConfig.m */,
+				40AEB93F1C14E161004BF295 /* WebRTCUtil.h */,
+			);
+			name = MeetRTC;
+			sourceTree = "<group>";
+		};
+		405C44C21C13DCC2001B9A2A /* XMPP */ = {
+			isa = PBXGroup;
+			children = (
+				40AEB9101C14E0FE004BF295 /* XMPPMessage+Signaling.h */,
+				40AEB9111C14E0FE004BF295 /* XMPPMessage+Signaling.m */,
+				40AEB9121C14E0FE004BF295 /* XMPPWorker.h */,
+				40AEB9131C14E0FE004BF295 /* XMPPWorker.m */,
+			);
+			name = XMPP;
+			sourceTree = "<group>";
+		};
+		78058B523D5C6762130B22B4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FFCEDB1F172E85F58FED2A50 /* Pods.debug.xcconfig */,
+				F6DB2EFFC3CF84E55E3DBB0C /* Pods.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -73,9 +202,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 405C44BE1C13DC3C001B9A2A /* Build configuration list for PBXNativeTarget "MeetRTCSDK_ios" */;
 			buildPhases = (
+				E7CA7A72F80DA412A5D3959C /* Check Pods Manifest.lock */,
 				405C44B11C13DC3C001B9A2A /* Sources */,
 				405C44B21C13DC3C001B9A2A /* Frameworks */,
 				405C44B31C13DC3C001B9A2A /* CopyFiles */,
+				697022EC1E11F525E9792648 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -117,12 +248,62 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		697022EC1E11F525E9792648 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E7CA7A72F80DA412A5D3959C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		405C44B11C13DC3C001B9A2A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				405C44BB1C13DC3C001B9A2A /* MeetRTCSDK_ios.m in Sources */,
+				40AEB9501C14E161004BF295 /* WebRTCStatsCollector.m in Sources */,
+				40AEB94D1C14E161004BF295 /* WebRTCStackConfig.m in Sources */,
+				40AEB9521C14E161004BF295 /* WebRTCStreamConfig.m in Sources */,
+				40AEB9451C14E161004BF295 /* WebRTCFactory.m in Sources */,
+				40AEB9441C14E161004BF295 /* WebRTCConsoleLogger.m in Sources */,
+				40AEB9141C14E0FE004BF295 /* XMPPMessage+Signaling.m in Sources */,
+				40AEB9481C14E161004BF295 /* WebRTCLogging.m in Sources */,
+				40AEB94F1C14E161004BF295 /* WebRTCStatReport.m in Sources */,
+				40AEB94C1C14E161004BF295 /* WebRTCStack.mm in Sources */,
+				40AEB9471C14E161004BF295 /* WebRTCJson.m in Sources */,
+				40AEB9511C14E161004BF295 /* WebRTCStream.m in Sources */,
+				40AEB9491C14E161004BF295 /* WebRTCLogHandler.m in Sources */,
+				40AEB9401C14E161004BF295 /* MeetRTCSDK.m in Sources */,
+				40AEB94A1C14E161004BF295 /* WebRTCSession.mm in Sources */,
+				40AEB94B1C14E161004BF295 /* WebRTCSessionConfig.m in Sources */,
+				40AEB9411C14E161004BF295 /* Reachability.m in Sources */,
+				40AEB9151C14E0FE004BF295 /* XMPPWorker.m in Sources */,
+				40AEB94E1C14E161004BF295 /* WebRTCStatGroup.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,8 +392,25 @@
 		};
 		405C44BF1C13DC3C001B9A2A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FFCEDB1F172E85F58FED2A50 /* Pods.debug.xcconfig */;
 			buildSettings = {
-				OTHER_LDFLAGS = "-ObjC";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SDKROOT)/usr/include/libxml2\"",
+					"\"$(SDKROOT)/usr/include/libresolv\"",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/CocoaAsyncSocket\"",
+					"\"${PODS_ROOT}/Headers/Public/CocoaLumberjack\"",
+					"\"${PODS_ROOT}/Headers/Public/SocketRocket\"",
+					"\"${PODS_ROOT}/Headers/Public/XEP-0166\"",
+					"\"${PODS_ROOT}/Headers/Public/XEP-0327\"",
+					"\"${PODS_ROOT}/Headers/Public/XMPPFramework\"",
+					"\"${PODS_ROOT}/Headers/Public/libjingle_peerconnection\"",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(inherited)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -220,8 +418,25 @@
 		};
 		405C44C01C13DC3C001B9A2A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6DB2EFFC3CF84E55E3DBB0C /* Pods.release.xcconfig */;
 			buildSettings = {
-				OTHER_LDFLAGS = "-ObjC";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SDKROOT)/usr/include/libxml2\"",
+					"\"$(SDKROOT)/usr/include/libresolv\"",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/CocoaAsyncSocket\"",
+					"\"${PODS_ROOT}/Headers/Public/CocoaLumberjack\"",
+					"\"${PODS_ROOT}/Headers/Public/SocketRocket\"",
+					"\"${PODS_ROOT}/Headers/Public/XEP-0166\"",
+					"\"${PODS_ROOT}/Headers/Public/XEP-0327\"",
+					"\"${PODS_ROOT}/Headers/Public/XMPPFramework\"",
+					"\"${PODS_ROOT}/Headers/Public/libjingle_peerconnection\"",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(inherited)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -246,6 +461,7 @@
 				405C44C01C13DC3C001B9A2A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

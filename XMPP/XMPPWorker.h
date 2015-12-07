@@ -11,6 +11,12 @@
 #import "XMPPFramework.h"
 #import "XMPPRoom.h"
 #import "XMPPJingle.h"
+#import "XMPPRoster.h"
+#import "XMPPReconnect.h"
+#import "XMPPRosterCoreDataStorage.h"
+#import "XMPPvCardCoreDataStorage.h"
+#import "XMPPCapabilities.h"
+#import "XMPPCapabilitiesCoreDataStorage.h"
 
 @protocol XMPPWorkerSignalingDelegate;
 

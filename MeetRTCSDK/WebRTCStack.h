@@ -138,7 +138,9 @@ typedef enum : NSInteger {
 - (int) getMachineID;
 - (void) initiateReconnect;
 - (NSString *) platformType:(NSString *)platform;
+#ifdef H264_SUPPORT
 - (void)sendpreferredH264:(BOOL)preferH264;
+#endif
 
 //XMPP
 -(void)initilizeXMPP : (NSDictionary *)input;

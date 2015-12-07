@@ -17,15 +17,6 @@
 
 NSString* const Stream= @"Stream";
 
-NSString * const WebRTCRecordEventKey = @"WebRTCRecordEventKey";
-NSString * const WebRTCRecordEventDetailKey = @"WebRTCRecordEventDetailKey";
-
-@interface WebRTCStream () <RTCMediaStreamRecordingDelegate>
-    @property (nonatomic) BOOL isRecordingEnabled;
-    @property (nonatomic) NSMutableDictionary* recordState;
-@property (nonatomic) BOOL isRecordingStarted;
-@end
-
 
 @implementation WebRTCStream
 
@@ -38,9 +29,6 @@ NSString* const TAG6 = @"WebRTCStream";
         streamConfig = _streamConfig;
         camType = streamConfig.camType;
         isStarted = false;
-        _recordState = [[NSMutableDictionary alloc]init];
-        _isRecordingStarted = false;
-        _isRecordingEnabled = false;
     // Get capture device
     cameraID = nil;
 
@@ -181,22 +169,22 @@ NSString* const TAG6 = @"WebRTCStream";
                     localVideoTrack = [pcfactory videoTrackWithID:@"ARDAMSv0" source:videoSource];
                     
                     //Add video track to media stream
-                    if (localVideoTrack) {
-                    LogDebug(@"Calling localvideo track");
-                        //int *p=NULL; *p=1;
-                        [lms addVideoTrack:localVideoTrack];
-                        [self.delegate OnLocalStream:localVideoTrack];
-                        
-                        _isRecordingEnabled = true;
-                        
-                    }
-                    else
-                    {
+//                    if (localVideoTrack) {
+//                    LogDebug(@"Calling localvideo track");
+//                        //int *p=NULL; *p=1;
+//                        [lms addVideoTrack:localVideoTrack];
+//                        [self.delegate OnLocalStream:localVideoTrack];
+//                        
+//                        _isRecordingEnabled = true;
+//                        
+//                    }
+//                    else
+//                    {
                         NSError *error = [NSError errorWithDomain:Stream
                                                          code:ERR_LOCAL_TRACK
                                                      userInfo:nil];
                         [self.delegate onStreamError:error.description errorCode:error.code];
-                    }
+//                    }
                 }
             
             }
@@ -235,7 +223,6 @@ NSString* const TAG6 = @"WebRTCStream";
         //[capturer stop];
         //capturer= nil;
     }
-    _isRecordingEnabled = false;
     lms = nil;
     localVideoTrack = nil;
     isStarted = false;
@@ -515,83 +502,6 @@ NSString* const TAG6 = @"WebRTCStream";
 - (WebRTCStreamConfig*) getStreamConfig
 {
     return streamConfig;
-}
-
-- (int)startRecording
-{
-    //TODO: Implement startRecording functionality
-    if(!_isRecordingEnabled)
-    {
-        LogDebug(@"WebRTC::startRecording Stream has not started yet!!!" );
-        return ERR_INCORRECT_STATE;
-    }
-    
-    // Check if recording has already started
-    if (_isRecordingStarted)
-    {
-        LogDebug(@"WebRTC::startRecording recording has already started!!!" );
-        return ERR_INCORRECT_STATE;
-    }
-    
-    // Call media stream recording API
-    [lms startRecording:streamConfig.recordedFilePath videoquality:(int)streamConfig.recordingQuality videoHeight:[localVideoTrack getVideoHeight] videoWidth:[localVideoTrack getVideoWidth ]  delegate:self];
-    
-    _isRecordingStarted = true;
-    
-    return 0;
-}
-
-- (int)stopRecording
-{
-    // Check if recording has already started
-    if (!_isRecordingStarted)
-    {
-        LogDebug(@"WebRTC::startRecording recording has already stopped!!!" );
-        return ERR_INCORRECT_STATE;
-    }
-    
-    _isRecordingStarted = false;
-    
-    [lms stopRecording];
-    
-    return 0;
-}
-
-- (NSDictionary*)getRecordingStatus
-{
-    return nil;
-}
-
-#pragma mark - RTCMediaStreamRecordingDelegate delegates
-
-// Call back to receive recording events
-- (void) onLmsRecordingEvent:(NSDictionary *)state
-{
-    LogDebug(@"WebRTC::onLmsRecordingEvent state %@", state.description );
-
-    if([self.recordingDelegate conformsToProtocol:@protocol(WebRTCAVRecordingDelegate)] && [self.recordingDelegate respondsToSelector:@selector(onRecordingEvent:)]) {
-        
-        [_recordState setValuesForKeysWithDictionary:state];
-        if ([state[@"Event"] isEqualToString:@"Started"])
-        {
-            [_recordState setValue:[NSNumber numberWithInteger:WebRTCAVRecordingStarted] forKey:WebRTCRecordEventKey];
-        }
-        else if ([state[@"Event"] isEqualToString:@"Finished"])
-        {
-            [_recordState setValue:[NSNumber numberWithInteger:WebRTCAVRecordingEnded] forKey:WebRTCRecordEventKey];
-        }
-        [self.recordingDelegate onRecordingEvent:_recordState];
-    }
-}
-
-// Call back to receive recording errors
-- (void) onLmsRecordingError:(NSString*)error errorCode:(NSInteger)code
-{
-    LogDebug(@"WebRTC::onLmsRecordingError error %@", error);
-
-    if([self.recordingDelegate conformsToProtocol:@protocol(WebRTCAVRecordingDelegate)] && [self.recordingDelegate respondsToSelector:@selector(onRecordingError:errorCode:)]) {
-        [self.recordingDelegate onRecordingError:error errorCode:code ];
-    }
 }
 
 // Enable 4:3 video aspect ratio

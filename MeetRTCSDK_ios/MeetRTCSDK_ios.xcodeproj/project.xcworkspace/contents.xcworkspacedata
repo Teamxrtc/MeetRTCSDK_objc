@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:MeetRTCSDK_ios.xcodeproj">
+      location = "self:/Volumes/dev128gb/dev/teamxrtc/MeetRTCSDK_objc/MeetRTCSDK_ios/MeetRTCSDK_ios.xcodeproj">
    </FileRef>
 </Workspace>

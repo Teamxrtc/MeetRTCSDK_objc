@@ -15,7 +15,6 @@
 #import "RTCICEServer.h"
 #import "RTCMediaStream.h"
 #import "WebRTCStreamConfig.h"
-#import "WebRTCAVRecordingDelegate.h"
 
 // Error codes returned by APIs
 #define WEBRTC_ERR_INCORRECT_PARAMETERS -1
@@ -41,7 +40,6 @@
 
 }
 @property(nonatomic,assign) id<WebRTCStreamDelegate> delegate;
-@property(nonatomic,assign) id<WebRTCAVRecordingDelegate> recordingDelegate;
 //@property (nonatomic) WebRTCAVRecording* avRecording;
 //Below API's are called from the application for configuring the stream
 
@@ -52,10 +50,7 @@
 - (int)startVideo;
 - (int)muteAudio;
 - (int)unmuteAudio;
-//Below API's used for start and stop recording
--(int)startRecording;
--(int)stopRecording;
--(NSDictionary*)getRecordingStatus;
+
 -(void)setAspectRatio43:(BOOL)value;
 
 
